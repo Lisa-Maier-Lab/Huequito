@@ -27,16 +27,35 @@ You can run Jupyter Notebooks in two ways:
     and run notebooks directly from your local environment.
 
 ### Conda
-In addition to Jupyter Notebook, you will need to have the 
+In addition to Jupyter Notebooks, you will need to have the 
 ability to create and manage Conda environments. Conda is a 
 package and environment management system that allows you to 
 install dependencies and manage different project environments
 easily.
 
-### IRkernel
+If you are using this notebook on the M3 HPC you should have
+the ability to create Conda environments. 
 
-To execute R notebooks, you must also have the IRkernel available
-in the Conda environment you create to run the notebooks. 
+To create the VScode conda environment from the provided YAML file,
+run the following command in your terminal:
+
+```bash
+conda env create -f envs/VScode.yaml
+```
+
+This command will set up a new environment with all the specified packages.
+You only need to create the environment once.
+
+To activate the environment after creation, use:
+
+```bash
+conda activate VScode
+```
+
+YAML files for other Conda environments necessary to execute the pipelines
+are provided in the `/envs` folder. They are created and activated in a similar
+way described above.
+
 
 ## Why `Huequito`?
 Huequito means small hole in Spanish. I know, it is not my best joke.
